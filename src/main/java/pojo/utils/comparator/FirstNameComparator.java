@@ -29,7 +29,7 @@ import java.util.Comparator;
 public class FirstNameComparator implements Comparator<Person>, Serializable {
 
     @Override
-    public int compare(Person o1, Person o2) {
-        return o1.getFirstName().compareTo(o2.getFirstName());
+    public int compare(Person p1, Person p2) {
+        return p1.getFirstName().compareTo(p2.getFirstName());
     }
 }

@@ -18,14 +18,18 @@ package pojo.utils.comparator;
 
 import pojo.Person;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
  * Created by prince on 10/6/16.
+ * <p>
+ * Custom comparator which sorts person based on person's date of birth
  */
-public class DateOfBirthComparator implements Comparator<Person> {
+public class DateOfBirthComparator implements Comparator<Person>, Serializable {
+
     @Override
-    public int compare(Person o1, Person o2) {
-        return o2.getDateOfBirth().compareTo(o1.getDateOfBirth());
+    public int compare(Person p1, Person p2) {
+        return p2.getDateOfBirth().compareTo(p1.getDateOfBirth());
     }
 }
